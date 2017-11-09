@@ -104,8 +104,8 @@ RETURNING *;
 4. Create an endpoint at `POST '/api/vehicles'` that will take a vehicle from the body and add it to the database.
       * Use the  `RETURNING` clause to return the added vehicle information.
 
-5. Create an endpoint at `GET '/api/user/:userId/vehiclecount'` that will return a **count** of how many vehicles belong to the given user.
-      * Response should be an object with a count property, ie: `{ count: 1 }`
+5. Create an endpoint at `GET '/api/user/:userId/vehiclecount'` that will return a **count** of how many vehicles belong to the given user. Use a `SELECT COUNT()` query.
+      * Response should be an array with a single object that has a count property, ie: `{ count: 1 }`
 
 6. Create an endpoint at `GET '/api/user/:userId/vehicle'` that will find all **vehicles** that belong to the user with the provided users id.
 
